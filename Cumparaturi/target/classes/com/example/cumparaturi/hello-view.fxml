@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.example.cumparaturi.HelloController">
+
+    <top>
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Search by Marca/Nume: "/>
+            <TextField fx:id="filterField" promptText="Search..."/>
+            <Button text="Search" onAction="#onFilterButtonClick"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ListView fx:id="productList"/>
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+            <GridPane hgap="10" vgap="10">
+                <Label text="Marca:"/>
+                <TextField fx:id="brandField" promptText="Enter brand" GridPane.columnIndex="1"/>
+                <Label text="Nume:" GridPane.rowIndex="1"/>
+                <TextField fx:id="nameField" promptText="Enter name" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label text="Cantitate:" GridPane.rowIndex="2"/>
+                <TextField fx:id="quantityField" promptText="Enter quantity" GridPane.columnIndex="1"
+                           GridPane.rowIndex="2"/>
+            </GridPane>
+            <Button text="Add Product" onAction="#onAddProductButtonClick"/>
+        </VBox>
+    </bottom>
+</BorderPane>
